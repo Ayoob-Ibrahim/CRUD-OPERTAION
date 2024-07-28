@@ -1,0 +1,23 @@
+<div class="container">
+    <form action="action_page.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." [(ngModel)]="object.first">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." [(ngModel)]="object.last">
+
+
+        <input type="submit" value="Submit" (click)="onSubmit()">
+
+    </form>
+</div>
+
+<div class="column" *ngFor="let item of array;  let i = index">
+    <div class="card">
+        <!-- <h3>Card 1</h3> -->
+        <!-- <p>{{item.first}}</p> -->
+        <p>{{item.last}}</p>
+        <button type="button" class="btn btn-warning" (click)="remove(i)">Warning</button>
+    </div>
+</div>
